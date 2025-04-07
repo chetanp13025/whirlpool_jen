@@ -1,9 +1,9 @@
 <suite name="ProjectOne Test Suite">
     <test name="All Tests">
         <classes>
-            <class name="web.Over_write_file"/>
-            <class name="web.File_upload"/>
-            <class name="web.Create_trip"/>
+            <class name="test.Over_write_file"/>
+            <class name="test.File_upload"/>
+            <class name="test.Create_trip"/>
         </classes>
     </test>
 </suite>
