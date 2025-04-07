@@ -1,5 +1,5 @@
 <suite name="LoginSuite">
-	<test name="LoginTests">
+	<test name="Trip">
 		<classes>
 			<class name="test.Trip_create" />
 		</classes>

@@ -6,10 +6,9 @@ import org.testng.annotations.Test;
 
 import web.File_upload;
 
-public class Trip_create {
+public class Trip_create extends File_upload {
   @Test
   public void trip() throws IOException, InterruptedException {
-	  System.out.println("Started");
 	  File_upload.web();
   }
 }

@@ -2,30 +2,30 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-07T21:07:09 IST" name="Default suite" finished-at="2025-04-07T21:07:23 IST" duration-ms="14165">
+  <suite started-at="2025-04-07T21:35:17 IST" name="Default suite" finished-at="2025-04-07T21:35:32 IST" duration-ms="15480">
     <groups>
     </groups>
-    <test started-at="2025-04-07T21:07:09 IST" name="Default test" finished-at="2025-04-07T21:07:23 IST" duration-ms="14165">
+    <test started-at="2025-04-07T21:35:17 IST" name="Default test" finished-at="2025-04-07T21:35:32 IST" duration-ms="15480">
       <class name="test.Trip_create">
-        <test-method signature="trip()[pri:0, instance:test.Trip_create@738dc9b]" started-at="2025-04-07T21:07:09 IST" name="trip" finished-at="2025-04-07T21:07:23 IST" duration-ms="14117" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+        <test-method signature="trip()[pri:0, instance:test.Trip_create@6d4d66d2]" started-at="2025-04-07T21:35:17 IST" name="trip" finished-at="2025-04-07T21:35:32 IST" duration-ms="15441" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Browsing context has been discarded
+              <![CDATA[Failed to decode response from marionette
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-T34T3R7', ip: '192.168.140.2', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20250327043313, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 23432, moz:profile: C:\Users\Blubirch\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 3c27c021-8e71-471a-8d6a-e06ef49697fa
-*** Element info: {Using=xpath, value=(//div[@class='v-field__input'])[3]}]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20250327043313, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19544, moz:profile: C:\Users\Blubirch\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: e329be22-ee03-4015-99fa-616dc08b80ec
+*** Element info: {Using=xpath, value=//span[.='Confirm']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: Browsing context has been discarded
+              <![CDATA[org.openqa.selenium.WebDriverException: Failed to decode response from marionette
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-T34T3R7', ip: '192.168.140.2', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20250327043313, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 23432, moz:profile: C:\Users\Blubirch\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 3c27c021-8e71-471a-8d6a-e06ef49697fa
-*** Element info: {Using=xpath, value=(//div[@class='v-field__input'])[3]}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20250327043313, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19544, moz:profile: C:\Users\Blubirch\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: e329be22-ee03-4015-99fa-616dc08b80ec
+*** Element info: {Using=xpath, value=//span[.='Confirm']}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -41,7 +41,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at web.File_upload.web(File_upload.java:65)
+at web.File_upload.web(File_upload.java:69)
 at test.Trip_create.trip(Trip_create.java:12)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -73,7 +73,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- trip -->

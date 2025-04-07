@@ -32,8 +32,8 @@ public class File_upload extends Over_write_file{
 	public static void web() throws IOException, InterruptedException {
 		while (!success) {
 			try {
-				Over_write_file.Write();
-				// Properties_wl.pro();
+//				Over_write_file.Write();
+				 Properties_wl.pro();
 				// System.out.println(CRMticket);
 				System.out.println(SRNs);
 				// System.out.println(IRRDs);
