@@ -1,4 +1,4 @@
-package web;
+package test;
 
 import java.io.FileReader;
 import java.io.FileWriter;
