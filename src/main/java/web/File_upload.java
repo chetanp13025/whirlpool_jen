@@ -28,7 +28,7 @@ public class File_upload extends Over_write_file{
 	protected static JavascriptExecutor js;
 	static WebElement Confirma;
 	static WebElement Successfull;
-@Test
+
 	public static void web() throws IOException, InterruptedException {
 		while (!success) {
 			try {

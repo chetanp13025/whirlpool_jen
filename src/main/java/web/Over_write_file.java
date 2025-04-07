@@ -27,7 +27,7 @@ public class Over_write_file extends Properties_wl{
     public static ArrayList<String> IRDs = new ArrayList<>();
     public static ArrayList<String> tagLists = new ArrayList<>();
     public static String CRMTickets;
-@Test
+
 	public static void Write() {
 	Properties_wl.pro();
 	try (CSVReader csvReader = new CSVReader(new FileReader(filePath))) {
@@ -103,7 +103,7 @@ public class Over_write_file extends Properties_wl{
     } while (!usedValues.add(uniqueValue));
     return uniqueValue;
 }
-@Test
+
 private static String generateTagId() {
     String alphanumeric = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     Random random = new Random();

@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 public class Create_trip extends File_upload{
-	@Test
+	
 	public static void Trip() throws InterruptedException {
 		  
 		  
