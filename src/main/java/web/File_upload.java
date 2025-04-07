@@ -28,12 +28,11 @@ public class File_upload extends Over_write_file{
 	protected static JavascriptExecutor js;
 	static WebElement Confirma;
 	static WebElement Successfull;
-
-	@Test
+@Test
 	public static void web() throws IOException, InterruptedException {
 		while (!success) {
 			try {
-//				Over_write_file.Write();
+				Over_write_file.Write();
 //				 Properties_wl.pro();
 				// System.out.println(CRMticket);
 				System.out.println(SRNs);
@@ -78,7 +77,7 @@ public class File_upload extends Over_write_file{
 				if (status.equals("Completed")) {
 					System.out.println(status);
 					success = true;
-//					Create_trip.Trip();
+					Create_trip.Trip();
 					// } else if (status.equals("Import Started")) {
 					// Thread.sleep(3000);
 					// driver.navigate().refresh();
