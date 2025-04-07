@@ -1,7 +1,9 @@
-<suite name="LoginSuite">
-	<test name="Trip">
-		<classes>
-			<class name="test.Trip_create" />
-		</classes>
-	</test>
+<suite name="ProjectOne Test Suite">
+    <test name="All Tests">
+        <classes>
+            <class name="web.Over_write_file"/>
+            <class name="web.File_upload"/>
+            <class name="web.Create_trip"/>
+        </classes>
+    </test>
 </suite>

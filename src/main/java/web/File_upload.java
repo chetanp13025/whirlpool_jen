@@ -9,9 +9,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-
+@Test
 public class File_upload extends Over_write_file{
 	static WebDriver driver;
 	static boolean success = false;
@@ -33,7 +34,7 @@ public class File_upload extends Over_write_file{
 		while (!success) {
 			try {
 //				Over_write_file.Write();
-				 Properties_wl.pro();
+//				 Properties_wl.pro();
 				// System.out.println(CRMticket);
 				System.out.println(SRNs);
 				// System.out.println(IRRDs);
@@ -77,7 +78,7 @@ public class File_upload extends Over_write_file{
 				if (status.equals("Completed")) {
 					System.out.println(status);
 					success = true;
-					Create_trip.Trip();
+//					Create_trip.Trip();
 					// } else if (status.equals("Import Started")) {
 					// Thread.sleep(3000);
 					// driver.navigate().refresh();

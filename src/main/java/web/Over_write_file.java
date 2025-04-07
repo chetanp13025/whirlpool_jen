@@ -10,10 +10,13 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
+import org.testng.annotations.Test;
+
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import com.opencsv.exceptions.CsvException;
 
+@Test
 public class Over_write_file extends Properties_wl{
 	static String filePath = ".\\csv_file\\Whirlpool_file.csv";
     static Set<String> usedValues = new HashSet<>();
