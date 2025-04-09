@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="6" passed="3" failed="2" skipped="1">
   <reporter-output>
   </reporter-output>
@@ -132,6 +133,29 @@ at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at test.File_uploadtest.web(File_uploadtest.java:49)
 at test.File_uploadtest.testFileUploadProcess(File_uploadtest.java:36)
+=======
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-07T22:37:40 IST" name="Default suite" finished-at="2025-04-07T22:37:40 IST" duration-ms="40">
+    <groups>
+    </groups>
+    <test started-at="2025-04-07T22:37:40 IST" name="Default test" finished-at="2025-04-07T22:37:40 IST" duration-ms="40">
+      <class name="test.Trip_create">
+        <test-method signature="trip()[pri:0, instance:test.Trip_create@1c5920df]" started-at="2025-04-07T22:37:40 IST" name="trip" finished-at="2025-04-07T22:37:40 IST" duration-ms="5" status="FAIL">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problem: 
+Test cannot be resolved to a type
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problem: 
+Test cannot be resolved to a type
+
+at web.File_upload.web(File_upload.java:31)
+at test.Trip_create.trip(Trip_create.java:12)
+>>>>>>> d9a195783533d891d0e03a8896b34ef24a7fa62e
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -162,9 +186,10 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- java.lang.Error -->
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- testFileUploadProcess -->
         <test-method signature="testCreateTripProcess()[pri:0, instance:test.Create_tripTest@3f191845]" started-at="2025-04-09T20:28:00 IST" name="testCreateTripProcess" finished-at="2025-04-09T20:28:00 IST" depends-on-methods="test.File_uploadtest.testFileUploadProcess" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
@@ -209,4 +234,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
       </class> <!-- test.Create_tripTest -->
     </test> <!-- Sequential Tests -->
   </suite> <!-- Whirlpool Test Suite -->
+=======
+        </test-method> <!-- trip -->
+      </class> <!-- test.Trip_create -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+>>>>>>> d9a195783533d891d0e03a8896b34ef24a7fa62e
 </testng-results>

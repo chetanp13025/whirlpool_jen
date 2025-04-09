@@ -81,6 +81,7 @@
 		</dependency>
 	</dependencies>
 	<build>
+<<<<<<< HEAD
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -101,4 +102,38 @@
         </plugin>
     </plugins>
 </build>
+=======
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+					<provider>testng</provider>
+					<properties>
+						<property>
+							<name>usedefaultlisteners</name>
+							<value>false</value>
+						</property>
+						<property>
+							<name>listener</name>
+							<value>
+								org.testng.reporters.TestHTMLReporter,org.testng.reporters.XMLReporter</value>
+						</property>
+					</properties>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.surefire</groupId>
+						<artifactId>surefire-testng</artifactId>
+						<version>3.0.0</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+>>>>>>> d9a195783533d891d0e03a8896b34ef24a7fa62e
 </project>
