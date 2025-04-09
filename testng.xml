@@ -1,7 +1,9 @@
-<suite name="ProjectOne Test Suite">
-    <test name="All Tests">
+<suite name="Whirlpool Test Suite">
+    <test name="Sequential Tests">
         <classes>
-            <class name="test.Trip_create"/>
+            <class name="test.Over_write_filetest"/>
+            <class name="test.File_uploadtest"/>
+            <class name="test.Create_tripTest"/>
         </classes>
     </test>
 </suite>

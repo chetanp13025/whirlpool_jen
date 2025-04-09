@@ -1,9 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>Whirpool_maven</groupId>
-  <artifactId>Whirpool_maven</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-<properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Whirpool_maven</groupId>
+	<artifactId>Whirpool_maven</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -83,28 +85,18 @@
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0</version> 
+            <version>3.0.0</version>
             <configuration>
                 <suiteXmlFiles>
                     <suiteXmlFile>testng.xml</suiteXmlFile>
                 </suiteXmlFiles>
-                <provider>testng</provider> 
-                <properties>
-                    <property>
-                        <name>usedefaultlisteners</name>
-                        <value>false</value>
-                    </property>
-                    <property>
-                        <name>listener</name>
-                        <value>org.testng.reporters.TestHTMLReporter,org.testng.reporters.XMLReporter</value>
-                    </property>
-                </properties>
             </configuration>
             <dependencies>
                 <dependency>
                     <groupId>org.apache.maven.surefire</groupId>
                     <artifactId>surefire-testng</artifactId>
-                    <version>3.9.9</version>                </dependency>
+                    <version>3.0.0</version>
+                </dependency>
             </dependencies>
         </plugin>
     </plugins>
