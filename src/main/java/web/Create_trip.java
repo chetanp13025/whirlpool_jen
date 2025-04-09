@@ -3,11 +3,11 @@ package web;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
-public class Create_trip extends File_upload{
-	
+
+public class Create_trip extends File_upload {
+
 	public static void Trip() throws InterruptedException {
-		  
-		  
+
 		driver.findElement(By.xpath(Profile)).click();
 		Thread.sleep(500);
 		driver.findElement(By.xpath(Logout)).click();
@@ -46,10 +46,10 @@ public class Create_trip extends File_upload{
 		driver.findElement(By.xpath(Submit)).click();
 		Thread.sleep(1500);
 		driver.findElement(By.xpath(Track_trip)).click();
-		
-//		driver.findElement(By.xpath(Log_ex)).sendKeys("chetan");
-//		driver.findElement(By.xpath(Exe)).click();
-//		driver.findElement(By.xpath(Confirm)).click();
+
+		// driver.findElement(By.xpath(Log_ex)).sendKeys("chetan");
+		// driver.findElement(By.xpath(Exe)).click();
+		// driver.findElement(By.xpath(Confirm)).click();
 		Thread.sleep(1500);
 		// driver.findElement(By.xpath(Check_box)).click();
 		// seq = driver.findElements(By.xpath(Sequence));
