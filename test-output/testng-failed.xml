@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Whirlpool Test Suite]">
-  <test thread-count="5" name="Sequential Tests(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="test.File_uploadtest">
         <methods>
           <include name="testFileUploadProcess"/>
         </methods>
       </class> <!-- test.File_uploadtest -->
-      <class name="test.Create_tripTest">
-        <methods>
-          <include name="testCreateTripProcess"/>
-          <include name="testFileUploadProcess"/>
-        </methods>
-      </class> <!-- test.Create_tripTest -->
     </classes>
-  </test> <!-- Sequential Tests(failed) -->
-</suite> <!-- Failed suite [Whirlpool Test Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

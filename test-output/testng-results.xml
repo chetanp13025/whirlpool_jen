@@ -1,55 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="0" total="6" passed="3" failed="2" skipped="1">
+<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-09T20:27:48 IST" name="Whirlpool Test Suite" finished-at="2025-04-09T20:28:00 IST" duration-ms="12594">
+  <suite started-at="2025-05-08T11:01:40 IST" name="Default suite" finished-at="2025-05-08T11:01:47 IST" duration-ms="7180">
     <groups>
     </groups>
-    <test started-at="2025-04-09T20:27:48 IST" name="Sequential Tests" finished-at="2025-04-09T20:28:00 IST" duration-ms="12594">
+    <test started-at="2025-05-08T11:01:40 IST" name="Default test" finished-at="2025-05-08T11:01:47 IST" duration-ms="7180">
       <class name="test.File_uploadtest">
-        <test-method signature="testFileUploadProcess()[pri:0, instance:test.File_uploadtest@35dab4eb]" started-at="2025-04-09T20:27:48 IST" name="testFileUploadProcess" finished-at="2025-04-09T20:27:56 IST" duration-ms="8382" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method signature="testFileUploadProcess()[pri:0, instance:test.File_uploadtest@3ba987b8]" started-at="2025-05-08T11:01:40 IST" name="testFileUploadProcess" finished-at="2025-05-08T11:01:47 IST" duration-ms="7132" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Failed to decode response from marionette
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-T34T3R7', ip: '192.168.140.2', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: driver.version: FirefoxDriver
-remote stacktrace: ]]>
+              <![CDATA[null value in entry: url=null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Failed to decode response from marionette
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-T34T3R7', ip: '192.168.140.2', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: driver.version: FirefoxDriver
-remote stacktrace: 
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
-at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
-at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:147)
-at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:125)
-at test.File_uploadtest.web(File_uploadtest.java:45)
+              <![CDATA[java.lang.NullPointerException: null value in entry: url=null
+at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:32)
+at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:42)
+at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:72)
+at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:124)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+at test.File_uploadtest.web(File_uploadtest.java:48)
 at test.File_uploadtest.testFileUploadProcess(File_uploadtest.java:36)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -81,163 +51,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFileUploadProcess -->
-        <test-method signature="testWriteOperation()[pri:0, instance:test.File_uploadtest@35dab4eb]" started-at="2025-04-09T20:27:56 IST" name="testWriteOperation" finished-at="2025-04-09T20:27:56 IST" duration-ms="10" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testWriteOperation -->
       </class> <!-- test.File_uploadtest -->
-      <class name="test.Over_write_filetest">
-        <test-method signature="testWriteOperation()[pri:0, instance:test.Over_write_filetest@712625fd]" started-at="2025-04-09T20:27:48 IST" name="testWriteOperation" finished-at="2025-04-09T20:27:48 IST" duration-ms="84" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testWriteOperation -->
-      </class> <!-- test.Over_write_filetest -->
-      <class name="test.Create_tripTest">
-        <test-method signature="testFileUploadProcess()[pri:0, instance:test.Create_tripTest@3f191845]" started-at="2025-04-09T20:27:56 IST" name="testFileUploadProcess" finished-at="2025-04-09T20:28:00 IST" duration-ms="4039" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[Browsing context has been discarded
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-T34T3R7', ip: '192.168.140.2', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20250407111027, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 6004, moz:profile: C:\Users\Blubirch\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 3618b43c-718e-43d5-80de-56f025836877
-*** Element info: {Using=xpath, value=//input[@placeholder='Enter email ID/phone number/User ID']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: Browsing context has been discarded
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-T34T3R7', ip: '192.168.140.2', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 137.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20250407111027, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 6004, moz:profile: C:\Users\Blubirch\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 3618b43c-718e-43d5-80de-56f025836877
-*** Element info: {Using=xpath, value=//input[@placeholder='Enter email ID/phone number/User ID']}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at test.File_uploadtest.web(File_uploadtest.java:49)
-at test.File_uploadtest.testFileUploadProcess(File_uploadtest.java:36)
-=======
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2025-04-07T22:37:40 IST" name="Default suite" finished-at="2025-04-07T22:37:40 IST" duration-ms="40">
-    <groups>
-    </groups>
-    <test started-at="2025-04-07T22:37:40 IST" name="Default test" finished-at="2025-04-07T22:37:40 IST" duration-ms="40">
-      <class name="test.Trip_create">
-        <test-method signature="trip()[pri:0, instance:test.Trip_create@1c5920df]" started-at="2025-04-07T22:37:40 IST" name="trip" finished-at="2025-04-07T22:37:40 IST" duration-ms="5" status="FAIL">
-          <exception class="java.lang.Error">
-            <message>
-              <![CDATA[Unresolved compilation problem: 
-Test cannot be resolved to a type
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problem: 
-Test cannot be resolved to a type
-
-at web.File_upload.web(File_upload.java:31)
-at test.Trip_create.trip(Trip_create.java:12)
->>>>>>> d9a195783533d891d0e03a8896b34ef24a7fa62e
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
-          <reporter-output>
-          </reporter-output>
-<<<<<<< HEAD
-        </test-method> <!-- testFileUploadProcess -->
-        <test-method signature="testCreateTripProcess()[pri:0, instance:test.Create_tripTest@3f191845]" started-at="2025-04-09T20:28:00 IST" name="testCreateTripProcess" finished-at="2025-04-09T20:28:00 IST" depends-on-methods="test.File_uploadtest.testFileUploadProcess" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method test.Create_tripTest.testCreateTripProcess() on instance test.Create_tripTest@3f191845 depends on not successfully finished methods 
-[test.File_uploadtest.testFileUploadProcess() on instance test.Create_tripTest@3f191845
-test.File_uploadtest.testFileUploadProcess() on instance test.File_uploadtest@35dab4eb]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method test.Create_tripTest.testCreateTripProcess() on instance test.Create_tripTest@3f191845 depends on not successfully finished methods 
-[test.File_uploadtest.testFileUploadProcess() on instance test.Create_tripTest@3f191845
-test.File_uploadtest.testFileUploadProcess() on instance test.File_uploadtest@35dab4eb]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCreateTripProcess -->
-        <test-method signature="testWriteOperation()[pri:0, instance:test.Create_tripTest@3f191845]" started-at="2025-04-09T20:28:00 IST" name="testWriteOperation" finished-at="2025-04-09T20:28:00 IST" duration-ms="13" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testWriteOperation -->
-      </class> <!-- test.Create_tripTest -->
-    </test> <!-- Sequential Tests -->
-  </suite> <!-- Whirlpool Test Suite -->
-=======
-        </test-method> <!-- trip -->
-      </class> <!-- test.Trip_create -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
->>>>>>> d9a195783533d891d0e03a8896b34ef24a7fa62e
 </testng-results>

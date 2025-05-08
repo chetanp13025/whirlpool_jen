@@ -32,7 +32,8 @@ public class File_uploadtest extends Over_write_filetest {
     static WebElement Successfull;
 
     @Test // Mark this method as a TestNG test method
-    public void testFileUploadProcess() throws IOException, InterruptedException {
+    public static void testFileUploadProcess() throws IOException, InterruptedException {
+    	Over_write_filetest.Write();
         web(); // Call your existing web automation logic
         Assert.assertTrue(success, "File upload did not complete successfully.");
     }

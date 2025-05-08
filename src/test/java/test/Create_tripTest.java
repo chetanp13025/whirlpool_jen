@@ -1,5 +1,7 @@
 package test;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
@@ -7,8 +9,9 @@ import org.testng.annotations.Test;
 public class Create_tripTest extends File_uploadtest {
 
     @Test(dependsOnMethods = "testFileUploadProcess") // Run this after file upload
-    public void testCreateTripProcess() throws InterruptedException {
-        Trip();
+    public void testCreateTripProcess() throws InterruptedException, IOException {
+        File_uploadtest.testFileUploadProcess();
+    	Trip();
     }
 
     public static void Trip() throws InterruptedException {

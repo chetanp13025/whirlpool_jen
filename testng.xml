@@ -1,9 +1,7 @@
 <suite name="Whirlpool Test Suite">
     <test name="Sequential Tests">
         <classes>
-            <class name="test.Over_write_filetest"/>
-            <class name="test.File_uploadtest"/>
-            <class name="test.Create_tripTest"/>
+            <class name="test.Trip_create"/>
         </classes>
     </test>
 </suite>
