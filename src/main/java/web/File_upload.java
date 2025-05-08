@@ -9,10 +9,11 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.Test;
+// import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-public class File_upload extends Over_write_file{
+
+public class File_upload extends Over_write_file {
 	static WebDriver driver;
 	static boolean success = false;
 	static String filePath = ".\\csv_file\\Whirlpool_file.csv";
@@ -33,7 +34,7 @@ public class File_upload extends Over_write_file{
 		while (!success) {
 			try {
 				Over_write_file.Write();
-//				 Properties_wl.pro();
+				// Properties_wl.pro();
 				// System.out.println(CRMticket);
 				System.out.println(SRNs);
 				// System.out.println(IRRDs);
@@ -98,9 +99,9 @@ public class File_upload extends Over_write_file{
 		}
 	}
 
-//	public static String getCurrentTime() {
-//		SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy hh:mm:ss a");
-//		Date now = new Date();
-//		return sdf.format(now);
-//	}
+	// public static String getCurrentTime() {
+	// SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy hh:mm:ss a");
+	// Date now = new Date();
+	// return sdf.format(now);
+	// }
 }

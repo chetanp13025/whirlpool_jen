@@ -2,7 +2,7 @@ package web;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.testng.annotations.Test;
+// import org.testng.annotations.Test;
 
 public class Create_trip extends File_upload {
 
