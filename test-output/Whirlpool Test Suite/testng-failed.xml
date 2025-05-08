@@ -3,17 +3,12 @@
 <suite name="Failed suite [Whirlpool Test Suite]">
   <test thread-count="5" name="Sequential Tests(failed)">
     <classes>
-      <class name="test.File_uploadtest">
+      <class name="test.Trip_create">
         <methods>
+          <include name="trip"/>
           <include name="testFileUploadProcess"/>
         </methods>
-      </class> <!-- test.File_uploadtest -->
-      <class name="test.Create_tripTest">
-        <methods>
-          <include name="testCreateTripProcess"/>
-          <include name="testFileUploadProcess"/>
-        </methods>
-      </class> <!-- test.Create_tripTest -->
+      </class> <!-- test.Trip_create -->
     </classes>
   </test> <!-- Sequential Tests(failed) -->
 </suite> <!-- Failed suite [Whirlpool Test Suite] -->

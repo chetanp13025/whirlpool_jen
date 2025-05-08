@@ -27,30 +27,18 @@ public class Over_write_filetest extends Properties_wl {
     public static ArrayList<String> tagLists = new ArrayList<>();
     public static String CRMTickets;
 
-    @Test // Mark this method as a TestNG test method
+    @Test
     public void testWriteOperation() throws IOException, CsvException {
-        // **Important:** To test the 'Write' method, you need to:
-        // 1. Set up a known initial state (e.g., create a small test CSV file).
-        // 2. Call the 'Write' method.
-        // 3. Assert that the file content and/or the static variables (like CRMticket, tagLists)
-        //    have been modified in the expected way.
-
-        // Example of setting up a test file (you might need to adjust the content and path)
         String testFilePath = ".\\csv_file\\test_whirlpool.csv";
         try (FileWriter writer = new FileWriter(testFilePath)) {
             writer.write("col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col12,col13,col14,col15,col16,col17,col18,col19,col20,col21\n");
             writer.write("initial1,initial2,initial3,initial4,initial5,initial6,val7,val8,val9,val10,val11,val12,val13,val14,val15,val16,val17,val18,initial_ird,initial_irrd,val21\n");
         }
 
-        // Temporarily change the file path for testing
         String originalFilePath = filePath;
         filePath = testFilePath;
 
-        // Call the Write method
         Write();
-
-        // Now, assert the results. You'll need to read the file or check the
-        // static variables that 'Write' modifies.
 
         try (CSVReader csvReader = new CSVReader(new FileReader(testFilePath))) {
             List<String[]> records = csvReader.readAll();
@@ -62,9 +50,7 @@ public class Over_write_filetest extends Properties_wl {
             Assert.assertEquals(tagLists.size(), 1, "Should have one tag ID generated");
             Assert.assertTrue(tagLists.get(0).startsWith("t-") && tagLists.get(0).length() == 8, "Tag ID format is incorrect");
         } finally {
-            // Restore the original file path
             filePath = originalFilePath;
-            // Clean up the test file
             new java.io.File(testFilePath).delete();
         }
     }
@@ -80,8 +66,7 @@ public class Over_write_filetest extends Properties_wl {
                 return;
             }
 
-            int existingRowCount = records.size() - 1; // Excluding header
-            System.out.println("Existing records count: " + existingRowCount);
+            int existingRowCount = records.size() - 1;
 
             CRMticket.clear();
             SRNs.clear();

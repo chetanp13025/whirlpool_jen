@@ -31,51 +31,76 @@ public class File_uploadtest extends Over_write_filetest {
     static WebElement Confirma;
     static WebElement Successfull;
 
-    @Test // Mark this method as a TestNG test method
+    @Test
     public static void testFileUploadProcess() throws IOException, InterruptedException {
-    	Over_write_filetest.Write();
-        web(); // Call your existing web automation logic
-        Assert.assertTrue(success, "File upload did not complete successfully.");
+        Over_write_filetest.Write(); // Prepopulate the file
+        web(); // Run the UI automation
+        Assert.assertTrue(success, "❌ File upload did not complete successfully.");
     }
 
     public static void web() throws IOException, InterruptedException {
         while (!success) {
             try {
-                System.out.println(SRNs); // Assuming SRNs is populated in Over_write_filetest
+                Assert.assertFalse(SRNs.isEmpty(), "❌ SRNs list is empty. Data was not written properly.");
+                
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
                 driver.manage().window().maximize();
                 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
                 driver.get(QA_URL);
-                driver.findElement(By.xpath(usernamefiledW)).sendKeys(usernameW);
-                driver.findElement(By.xpath(passfieldW)).sendKeys(passwordW);
-                driver.findElement(By.xpath(signinw)).click();
+
+                // Login
+                WebElement userField = driver.findElement(By.xpath(usernamefiledW));
+                WebElement passField = driver.findElement(By.xpath(passfieldW));
+                WebElement signInBtn = driver.findElement(By.xpath(signinw));
+
+                Assert.assertNotNull(userField, "❌ Username field not found.");
+                Assert.assertNotNull(passField, "❌ Password field not found.");
+                Assert.assertNotNull(signInBtn, "❌ Sign-in button not found.");
+
+                userField.sendKeys(usernameW);
+                passField.sendKeys(passwordW);
+                signInBtn.click();
+
                 Thread.sleep(1000);
 
                 Uploadtickets = driver.findElement(By.xpath(UploadT));
                 js = (JavascriptExecutor) driver;
                 js.executeScript("arguments[0].click();", Uploadtickets);
+
                 driver.findElement(By.xpath(Upload)).click();
                 driver.findElement(By.xpath(Select_file)).click();
+
                 absolutePath = System.getProperty("user.dir") + "\\" + filePath;
                 Runtime.getRuntime().exec("C://autoitfiles/fileupload.exe" + " " + absolutePath);
                 Thread.sleep(3000);
+
                 driver.findElement(By.xpath(Confirm)).click();
                 Thread.sleep(15000);
+
                 driver.navigate().refresh();
 
                 sta = driver.findElement(By.xpath(File_status));
+                Assert.assertNotNull(sta, "❌ File status element not found.");
+
                 status = sta.getText();
-                if (status.equals("Completed")) {
-                    System.out.println(status);
+                System.out.println("File status: " + status);
+
+                Assert.assertNotNull(status, "❌ Status text is null.");
+                Assert.assertFalse(status.isEmpty(), "❌ Status text is empty.");
+
+                if (status.equalsIgnoreCase("Completed")) {
                     success = true;
-                    // Create_trip.Trip();
+                    Assert.assertTrue(success, "✅ File upload completed.");
                 } else {
-                    System.out.println(status);
+                    System.out.println("❌ File upload status: " + status);
                     tagLists.clear();
+                    Assert.fail("❌ File status is not 'Completed'. It is: " + status);
                 }
+
             } finally {
-                // driver.quit(); // Consider when you want to quit the driver
+                // Optional: Uncomment when you're ready to close browser after testing
+                // driver.quit();
             }
         }
     }
