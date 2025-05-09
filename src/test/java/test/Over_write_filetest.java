@@ -29,6 +29,7 @@ public class Over_write_filetest extends Properties_wl {
 
     @Test
     public void testWriteOperation() throws IOException, CsvException {
+    	Write();
 //        String testFilePath = ".\\csv_file\\test_whirlpool.csv";
 //        try (FileWriter writer = new FileWriter(filePath)) {
 //            writer.write("col1,col2,col3,col4,col5,col6,col7,col8,col9,col10,col11,col12,col13,col14,col15,col16,col17,col18,col19,col20,col21\n");
@@ -37,7 +38,6 @@ public class Over_write_filetest extends Properties_wl {
 
         
 
-        Write();
 
         try (CSVReader csvReader = new CSVReader(new FileReader(filePath))) {
             List<String[]> records = csvReader.readAll();
