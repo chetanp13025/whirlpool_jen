@@ -41,6 +41,7 @@ public class File_uploadtest extends Over_write_filetest {
 	public static void web() throws IOException, InterruptedException {
 		while (!success) {
 			try {
+				System.out.println(SRNs);
 				Assert.assertFalse(SRNs.isEmpty(), "❌ SRNs list is empty. Data was not written properly.");
 
 				WebDriverManager.firefoxdriver().setup();

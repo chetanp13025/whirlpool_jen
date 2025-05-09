@@ -12,7 +12,7 @@ public class Create_tripTest extends File_uploadtest {
 
     @Test(dependsOnMethods = "testFileUploadProcess") // Run this after file upload
     public void testCreateTripProcess() throws InterruptedException, IOException {
-        File_uploadtest.testFileUploadProcess(); // Ensure file is uploaded
+//        File_uploadtest.testFileUploadProcess(); // Ensure file is uploaded
         Trip();
     }
 

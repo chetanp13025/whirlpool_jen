@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.File_uploadtest">
+      <class name="test.Over_write_filetest">
         <methods>
-          <include name="testFileUploadProcess"/>
+          <include name="testWriteOperation"/>
         </methods>
-      </class> <!-- test.File_uploadtest -->
+      </class> <!-- test.Over_write_filetest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
