@@ -15,93 +15,95 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class File_uploadtest extends Over_write_filetest {
-    static WebDriver driver;
-    static boolean success = false;
-    static String filePath = ".\\csv_file\\Whirlpool_file.csv";
-    static String absolutePath;
-    static WebElement sta;
-    static String status;
-    static WebElement Uploadtickets;
-    static WebElement CRM;
-    static List<WebElement> seq;
-    static List<WebElement> Seq_num;
-    static int i = 1;
-    static WebElement CRM_tiket_n;
-    protected static JavascriptExecutor js;
-    static WebElement Confirma;
-    static WebElement Successfull;
+	static WebDriver driver;
+	static boolean success = false;
+	static String filePath = ".\\csv_file\\Whirlpool_file.csv";
+	static String absolutePath;
+	static WebElement sta;
+	static String status;
+	static WebElement Uploadtickets;
+	static WebElement CRM;
+	static List<WebElement> seq;
+	static List<WebElement> Seq_num;
+	static int i = 1;
+	static WebElement CRM_tiket_n;
+	protected static JavascriptExecutor js;
+	static WebElement Confirma;
+	static WebElement Successfull;
 
-    @Test
-    public static void testFileUploadProcess() throws IOException, InterruptedException {
-        Over_write_filetest.Write(); // Prepopulate the file
-        web(); // Run the UI automation
-        Assert.assertTrue(success, "❌ File upload did not complete successfully.");
-    }
+	@Test(dependsOnMethods = "testWriteOperation")
+	public static void testFileUploadProcess() throws IOException, InterruptedException {
+		Over_write_filetest.Write(); // Prepopulate the file
+		web(); // Run the UI automation
+		Assert.assertTrue(success, "❌ File upload did not complete successfully.");
+	}
 
-    public static void web() throws IOException, InterruptedException {
-        while (!success) {
-            try {
-                Assert.assertFalse(SRNs.isEmpty(), "❌ SRNs list is empty. Data was not written properly.");
-                
-                WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
-                driver.manage().window().maximize();
-                driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-                driver.get(QA_URL);
+	public static void web() throws IOException, InterruptedException {
+		while (!success) {
+			try {
+				Assert.assertFalse(SRNs.isEmpty(), "❌ SRNs list is empty. Data was not written properly.");
 
-                // Login
-                WebElement userField = driver.findElement(By.xpath(usernamefiledW));
-                WebElement passField = driver.findElement(By.xpath(passfieldW));
-                WebElement signInBtn = driver.findElement(By.xpath(signinw));
+				WebDriverManager.firefoxdriver().setup();
+				driver = new FirefoxDriver();
+				driver.manage().window().maximize();
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+				driver.get(QA_URL);
 
-                Assert.assertNotNull(userField, "❌ Username field not found.");
-                Assert.assertNotNull(passField, "❌ Password field not found.");
-                Assert.assertNotNull(signInBtn, "❌ Sign-in button not found.");
+				// Login
+				WebElement userField = driver.findElement(By.xpath(usernamefiledW));
+				WebElement passField = driver.findElement(By.xpath(passfieldW));
+				WebElement signInBtn = driver.findElement(By.xpath(signinw));
 
-                userField.sendKeys(usernameW);
-                passField.sendKeys(passwordW);
-                signInBtn.click();
+				Assert.assertNotNull(userField, "❌ Username field not found.");
+				Assert.assertNotNull(passField, "❌ Password field not found.");
+				Assert.assertNotNull(signInBtn, "❌ Sign-in button not found.");
 
-                Thread.sleep(1000);
+				userField.sendKeys(usernameW);
+				passField.sendKeys(passwordW);
+				signInBtn.click();
 
-                Uploadtickets = driver.findElement(By.xpath(UploadT));
-                js = (JavascriptExecutor) driver;
-                js.executeScript("arguments[0].click();", Uploadtickets);
+				Thread.sleep(1000);
 
-                driver.findElement(By.xpath(Upload)).click();
-                driver.findElement(By.xpath(Select_file)).click();
+				Uploadtickets = driver.findElement(By.xpath(UploadT));
+				js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", Uploadtickets);
 
-                absolutePath = System.getProperty("user.dir") + "\\" + filePath;
-                Runtime.getRuntime().exec("C://autoitfiles/fileupload.exe" + " " + absolutePath);
-                Thread.sleep(3000);
+				driver.findElement(By.xpath(Upload)).click();
+				driver.findElement(By.xpath(Select_file)).click();
 
-                driver.findElement(By.xpath(Confirm)).click();
-                Thread.sleep(15000);
+				absolutePath = System.getProperty("user.dir") + "\\" + filePath;
+				Runtime.getRuntime().exec("C://autoitfiles/fileupload.exe" + " " + absolutePath);
+				Thread.sleep(3000);
 
-                driver.navigate().refresh();
+				driver.findElement(By.xpath(Confirm)).click();
+				Thread.sleep(18000);
 
-                sta = driver.findElement(By.xpath(File_status));
-                Assert.assertNotNull(sta, "❌ File status element not found.");
+				driver.navigate().refresh();
 
-                status = sta.getText();
-                System.out.println("File status: " + status);
+				sta = driver.findElement(By.xpath(File_status));
+				Assert.assertNotNull(sta, "❌ File status element not found.");
 
-                Assert.assertNotNull(status, "❌ Status text is null.");
-                Assert.assertFalse(status.isEmpty(), "❌ Status text is empty.");
+				status = sta.getText();
+				System.out.println("File status: " + status);
 
-                if (status.equalsIgnoreCase("Completed")) {
-                    success = true;
-                    Assert.assertTrue(success, "✅ File upload completed.");
-                } else {
-                    System.out.println("❌ File upload status: " + status);
-                    tagLists.clear();
-                    Assert.fail("❌ File status is not 'Completed'. It is: " + status);
-                }
+				Assert.assertNotNull(status, "❌ Status text is null.");
+				Assert.assertFalse(status.isEmpty(), "❌ Status text is empty.");
 
-            } finally {
-                // Optional: Uncomment when you're ready to close browser after testing
-                // driver.quit();
-            }
-        }
-    }
+				if (status.equalsIgnoreCase("Completed")) {
+					success = true;
+					Assert.assertTrue(success, "✅ File upload completed.");
+					Create_tripTest.Trip();
+
+				} else {
+					System.out.println("❌ File upload status: " + status);
+					tagLists.clear();
+					Assert.fail("❌ File status is not 'Completed'. It is: " + status);
+				}
+
+			} finally {
+				// Optional: Uncomment when you're ready to close browser after testing
+				// driver.quit();
+			}
+		}
+	}
 }
