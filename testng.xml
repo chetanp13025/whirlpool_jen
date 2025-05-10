@@ -1,5 +1,5 @@
 <suite name="Whirlpool Test Suite">
-    <test name="Sequential Tests">
+    <test name="Whirlpool Tests">
         <classes>
             <class name="test.Trip_create"/>
         </classes>
